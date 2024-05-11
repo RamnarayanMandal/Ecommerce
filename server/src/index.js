@@ -18,6 +18,10 @@ app.use("/api/panshop/order", require("../src/routes/panShopRoutes"));
 
 app.use("/api/panShopLogin" ,require("../src/routes/panShopOwnerRoutes"))  
 
+ app.listen(port,()=>{
+        console.log(` ⚙️  Server is running on port ${port}`)
+
+    })
 
 app.listen(port,()=>{
     console.log(`Server runiinrng port no ${port}`);
