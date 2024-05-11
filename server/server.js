@@ -16,8 +16,11 @@ app.use(express.json())
 
 app.use("/api/panshop/order", require("./src/routes/panShopRoutes"));
 
-app.use("/api/panShopLogin" ,require("./src/routes/panShopOwnerRoutes"))  
+app.use("/api/panShopLogin" ,require("./src/routes/panShopOwnerRoutes")) 
 
+ app.get('/', (req, res) => {
+        res.send('Hello World!')
+      })
 
 app.listen(port,()=>{
     console.log(`Server runiinrng port no ${port}`);
